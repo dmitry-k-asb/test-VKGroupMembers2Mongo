@@ -1,0 +1,24 @@
+var items = [];
+var ret;
+var total  = BIND_total;
+var offset = BIND_outer_loop * 25000;
+var loop   = 0;
+
+while (offset < total && loop < 25)
+{
+	ret = API.groups.getMembers({
+		"group_id" : "BIND_group_id",
+		"sort"     : "id_asc",
+		"offset"   :  offset,
+		"count"    :  1000,
+		"v"        : "BIND_v",
+		"fields"   : "BIND_fields"
+		});
+	
+	offset = offset + 1000;
+	loop = loop + 1;
+	
+	items = items + ret['items'];
+}
+
+return items;
