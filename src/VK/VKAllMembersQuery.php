@@ -1,5 +1,6 @@
 <?php
-require_once('vkapiquery.php');
+
+namespace VKGroupMembers2Mongo\VK;
 
 class VKAllMembersQuery extends VKAPIquery
 {
