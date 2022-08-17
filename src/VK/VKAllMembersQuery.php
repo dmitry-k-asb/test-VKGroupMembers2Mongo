@@ -44,10 +44,10 @@ class VKAllMembersQuery extends VKAPIquery
 	{
 		$params =
 		[
-			'group_id'		=> $this->group_id,
-			'access_token'	=> $this->token,
-			'v'				=> self::V,
-			'count'			=> 0
+			'group_id'     => $this->group_id,
+			'access_token' => $this->token,
+			'v'            => self::V,
+			'count'        => 0
 		];
 		$response = $this->vkQuery('groups.getMembers', $params); 
 		$this->total = $response['count'];
@@ -73,9 +73,9 @@ class VKAllMembersQuery extends VKAPIquery
 		$code = str_replace('BIND_outer_loop', $outer_loop, $this->code);
 		$params =
 		[
-			'code'			=> $code,
-			'access_token'	=> $this->token,
-			'v'				=> self::V
+			'code'         => $code,
+			'access_token' => $this->token,
+			'v'            => self::V
 		];
 		$response = $this->vkQuery('execute', $params);
 		usleep(333333);
