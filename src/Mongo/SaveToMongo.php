@@ -1,6 +1,7 @@
 <?php
 
-require 'vendor/autoload.php';
+namespace VKGroupMembers2Mongo\Mongo;
+//use MongoDB\Client;
 
 class SaveToMongo
 {
@@ -12,7 +13,7 @@ class SaveToMongo
 	{
 		try
 		{
-			$this->client = new MongoDB\Client($arg);
+			$this->client = new \MongoDB\Client($arg);
 		}
 		catch (\Exception $e)
 		{

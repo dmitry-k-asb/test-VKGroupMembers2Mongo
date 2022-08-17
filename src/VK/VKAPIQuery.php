@@ -1,5 +1,7 @@
 <?php
 
+namespace VKGroupMembers2Mongo\VK;
+
 class VKAPIQuery
 {
 	protected function vkQuery($api_method, $params)
